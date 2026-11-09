@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+/* =========================================
+   VARIÁVEIS DE CORES
+========================================= */
+:root {
+    --bg-color: #FDFBF9; /* creme bem claro */
+    --text-color: #4A403A; /* marrom acinzentado escuro */
+    --accent-color: #A990B0; /* Lilás Lavanda */
+    --line-color: #EAE0D8; /* linhas divisórias */
+}
+
+/* =========================================
+   RESET BÁSICO E CONFIGURAÇÕES GERAIS
+========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    font-family: 'Lato', sans-serif;
+    background-color: #FAFAF7; /* off-white/creme */
+    color: var(--text-color);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* =========================================
+   CABEÇALHO (HEADER) E LOGO
+========================================= */
+header {
+    text-align: center;
+    padding: clamp(2.5rem, 6vw, 4rem) 1rem 1rem;
+}
+
+header img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* =========================================
+   NAVEGAÇÃO (MENU)
+========================================= */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: clamp(0.75rem, 4vw, 3rem);
+    padding: 1.5rem clamp(1rem, 4vw, 2rem);
+}
+
+nav a {
+    color: var(--text-color);
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: clamp(1px, 0.2vw, 2.5px);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.4s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Linhas divisórias */
+hr {
+    width: 60%;
+    max-width: 800px;
+    margin: 1rem auto;
+    border: 0;
+    border-top: 1px solid var(--line-color);
+}
+
+/* =========================================
+   SEÇÕES GERAIS E CONTEÚDO
+========================================= */
+section {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: clamp(3rem, 7vw, 5rem) clamp(1rem, 4vw, 2rem);
+    text-align: center;
+}
+
+section h2 {
+    position: relative;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+    color: var(--text-color);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-style: italic;
+    font-weight: 400;
+}
+
+section p {
+    max-width: 650px;
+    margin-bottom: 1.5rem;
+    color: #5C524C;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    text-align: center;
+}
+
+strong {
+    color: var(--accent-color);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 2.8vw, 1.3rem);
+    font-weight: 500;
+}
+
+/* =========================================
+   IMAGENS E VÍDEOS
+========================================= */
+section img,
+section video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 3rem;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(74, 64, 58, 0.05); /* sombra leve */
+}
+
+/* =========================================
+   BOTÕES E LINKS ESPECÍFICOS
+========================================= */
+section.Encomendas a[href*="Formulário"] {
+    display: inline-block;
+    max-width: 100%;
+    margin: 2rem 0;
+    padding: 0.875rem clamp(1rem, 4vw, 2.5rem);
+    border: 1px solid var(--text-color);
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+    transition: all 0.4s ease;
+}
+
+section.Encomendas a[href*="Formulário"]:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+address {
+    margin-top: 1.5rem;
+    font-style: normal;
+}
+
+address p {
+    font-size: 0.95rem;
+}
+
+address a {
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+address a:hover {
+    opacity: 0.7;
+}
+
+section nav a[href="#topo"] {
+    padding-bottom: 3px;
+    border-bottom: 1px solid var(--line-color);
+    color: #999;
+    font-size: 0.7rem;
+}
+
+/* =========================================
+   RODAPÉ (FOOTER)
+========================================= */
+footer {
+    margin-top: 2rem;
+    padding: clamp(1.5rem, 3vw, 2rem) clamp(0.5rem, 2vw, 1rem);
+    border-top: 1px solid var(--line-color);
+    background-color: #F4EEF8; /* lavanda bem clarinho */
+    text-align: right;
+}
+
+footer h1 {
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+footer .redes-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    gap: 0.1rem;
+}
+
+footer .redes-sociais p {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+footer .redes-sociais p:hover {
+    color: var(--accent-color);
+}
+
+/* Modo responsivo para o rodapé */
+@media (min-width: 600px) {
+    footer .redes-sociais {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: right;
+        gap: clamp(0.5rem, 1.5vw, 1.2rem);
+    }
+}
+
+/* =======================================================
+   NOVO LAYOUT: LOJA VIRTUAL COM GRID (2 LINHAS x 2 COLUNAS)
+======================================================= */
+
+/* Fundo da Seção da Loja */
+.loja-virtual {
+    max-width: 100%;
+    padding-bottom: 2rem;
+    background-color: #F4EEF8;
+    background-image: url("toalha.png"); /* estampa toalha lilás */
+    background-repeat: repeat;
+    background-attachment: scroll;
+}
+
+/* Título */
+.loja-virtual h2 {
+    color: #4A403A;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Contêiner da Grade */
+.product-grid {
+    display: grid;
+    width: 100%;
+    max-width: 700px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+/* Cartões Brancos */
+.product-grid .card {
+    position: relative;
+    display: flex;
+    width: auto;
+    min-width: 0;
+    height: auto;
+    flex-direction: column;
+    padding: clamp(0.75rem, 2vw, 1rem);
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+/* Regras de Posicionamento dos Cartões na Grade */
+.item-top-left {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.item-top-right {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.item-bottom-left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.item-bottom-right {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/* Contêiner da Imagem do Produto */
+.product-grid .img-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    flex: 0 0 auto;
+    margin-bottom: 1rem;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+/* Sobrescrever a regra geral de imagens */
+.product-grid .img-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    box-shadow: none; /* tira sombra individual da imagem */
+}
+
+/* Textos da Loja */
+.product-grid .title {
+    margin-bottom: 8px;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.product-grid .price {
+    margin-top: auto; /* Empurra o preço sempre pro rodapé do cartão */
+    color: #000;
+    font-size: 1rem;
+}
+
+.sold-out {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 4px 10px;
+    border-radius: 2px;
+    background-color: #9A9A9A;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* BADGES (Selos fofinhos) fora do quadro */
+.badge {
+    position: absolute;
+    z-index: 10;
+    top: -15px;
+    left: -15px;
+}
+
+.new-badge {
+    background: transparent;
+    color: #c890f5;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.circle-badge {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 2px dotted #572c7a;
+    border-radius: 50%;
+    background-color: #c890f5;
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tag-badge {
+    padding: 5px 15px;
+    transform: rotate(-10deg);
+    border: 1px solid #572c7a;
+    background-color: #c890f5;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* =======================================================
+   SEÇÃO SOBRE (Layout 2 colunas)
+======================================================= */
+section.Sobre {
+    max-width: 1000px;
+    align-items: flex-start; /* Alinhar à esquerda */
+    text-align: left;
+}
+
+section.Sobre h2 {
+    width: 100%;
+    text-align: left;
+}
+
+/* Centralizar ("Voltar ao topo") dentro da seção Sobre */
+section.Sobre > nav {
+    width: 100%;
+    align-self: center;
+    margin-top: 6rem;
+}
+
+section.Sobre > img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 2rem 0;
+    object-fit: cover;
+}
+
+/* textos */
+section.Sobre > p {
+    max-width: 100%;
+    text-align: left;
+}
+
+/* =======================================================
+   Imagem à esquerda, Texto à direita
+======================================================= */
+.bloco-fundador {
+    position: relative;
+    width: 100%;
+    min-height: 480px;
+    margin-top: 4rem;
+}
+
+/* Nome do fundador na coluna esquerda */
+.nome-fundador {
+    width: 40%;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+/* Foto na coluna esquerda, abaixo do nome */
+.foto-fundador {
+    position: absolute;
+    top: 100px; /* não cobrir o nome */
+    bottom: 3rem;
+    left: 0;
+    width: 40%;
+}
+
+.foto-fundador img {
+    width: 70%;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* Texto na coluna direita */
+.texto-fundador {
+    position: absolute;
+    top: 100px; /* Mesmo valor de 'top' da foto */
+    right: 0;
+    width: 55%;
+}
+
+.texto-fundador .sobre-fundador {
+    margin-bottom: 0;
+    color: #5C524C;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* =======================================================
+   AJUSTES RESPONSIVOS
+======================================================= */
+
+/* Tablet e telas menores: reduzir espaços e empilhar o bloco do fundador */
+@media (max-width: 700px) {
+    header {
+        padding: 2.5rem 1rem 1rem;
+    }
+
+    nav {
+        gap: 0.75rem 1.25rem;
+        padding: 1.25rem 1rem;
+    }
+
+    nav a {
+        font-size: 0.75rem;
+        letter-spacing: 1.25px;
+    }
+
+    section {
+        padding: 3.5rem 1.25rem;
+    }
+
+    section h2 {
+        margin-bottom: 2rem;
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    section.Sobre > nav {
+        margin-top: 3rem;
+    }
+
+    .bloco-fundador {
+        display: flex;
+        min-height: 0;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    .nome-fundador {
+        width: 100%;
+        margin-bottom: 0;
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+    }
+
+    .foto-fundador {
+        position: static;
+        width: 100%;
+        margin: 0;
+    }
+
+    .foto-fundador img {
+        display: block;
+        width: 100%;
+        max-width: 24rem;
+        height: auto;
+        margin: 0 auto 1.5rem;
+    }
+
+    .texto-fundador {
+        position: static;
+        width: 100%;
+    }
+
+    .texto-fundador .sobre-fundador {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 3rem 1.25rem;
+    }
+
+    footer .redes-sociais {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem 2rem;
+    }
+}
+
+/* Celulares: uma coluna de produtos e botões mais compactos */
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.5rem;
+    }
+
+    .item-top-left,
+    .item-top-right,
+    .item-bottom-left,
+    .item-bottom-right {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    nav {
+        gap: 0.75rem 1rem;
+        padding: 1rem;
+    }
+
+    nav a {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    section.Encomendas a[href*="Formulário"] {
+        padding: 0.75rem 1rem;
+        letter-spacing: 1px;
+    }
+
+    footer .redes-sociais {
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kazuya Confeitaria Vegana-Formulário</title>
+	<link rel="stylesheet" href="Kazuya Confeitaria Vegana-Style.css">
+	</head>
+	<body id="topo">
+	<header>
+		<img src="logo.png" alt="Kazuya Confeitaria Vegana" style="float: center; width: 280px;">
+	</header><hr>
+	<nav>
+		<a href="Kazuya Confeitaria Vegana-Início.html">Início</a>
+	</nav><hr>
+	</header>
+	<section>
+		<h2>Faça seu pedido aqui!</h2>
+		<img src="Encomendas.png" alt="Foto de Leo Kazuya" style="width: 300px;">
+		<form class="formulario-encomenda">
+  		<p>
+ 		<label for="nome">Nome completo:</label><br>
+  		<input type="text" id="nome" name="nome" required><br>
+		</p>
+		<p>
+ 		<label for="contato">WhatsApp ou E-mail:</label><br>
+  		<input type="text" id="contato" name="contato" required><br>
+		</p>
+		<p>
+ 		<label for="produto">Bolo para qual ocasião:</label>
+  		<select id="produto" name="produto" required>
+    		<option value="">Selecione uma opção...</option>
+   		<option value="produto1">BOLO DE ANIVERSÁRIO 🎂</option>
+    		<option value="produto2">BOLO DE CASAMENTO 💍🥂</option>
+		<option value="produto2">BOLO P/ EVENTO 🎉🎊</option>
+ 	 	</select><br>
+		</p>
+		<p>
+ 		<label for="quantidade">Para servir quantas pessoas:</label>
+ 		<input type="number" id="quantidade" name="quantidade" min="1" value="1" required><br>
+		</p>
+		<p>
+  		<label for="data">Data de entrega desejada:</label>
+ 		<input type="date" id="data" name="data" required><br>
+		</p>
+		<p>
+  		<label for="endereco">Endereço de entrega:</label><br>
+  		<textarea id="endereco" name="endereco" rows="3" required></textarea><br>
+		</p>
+		<p>
+		<label for="observações">Adicione detalhes ao seu pedido:</label><br>
+  		<textarea id="observações" name="observações" rows="5" required></textarea><br>
+		</p>
+ 		<button type="submit">Enviar Pedido!</button>
+		</form><br>
+
+		<nav>
+		<a href="Kazuya Confeitaria Vegana-Início.html">Voltar ao Início</a>
+		</nav><hr>
+	</section>
+	</body>
+	<footer>
+		<div class="redes-sociais">
+		<h1>Acompanhe nosso trabalho:</h1>
+		<script>
+			var nome = "Leo Kazuya";
+  			var data = "10|2016";
+  			var twitter = "@leokazuya";
+  			var facebook = "@leokazuya";
+ 			var instagram = "@leokazuya";
+  			var linkedin = "@leokazuya";
+  			var pronome = "ele|dele";
+  			var localizacao = "Higienópolis";
+			document.write(`
+      			<p>${nome}</p>
+      			<p>${data}</p>
+      			<p>Twitter: ${twitter}</p>
+      			<p>Facebook: ${facebook}</p>
+      			<p>Instagram: ${instagram}</p>
+      			<p>LinkedIn: ${linkedin}</p>
+      			<p>Pronome: ${pronome}</p>
+      			<p>Localização: ${localizacao}</p>
+  			`);
+		</script>
+	</footer>
